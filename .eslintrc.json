@@ -1,10 +1,15 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["@typescript-eslint"],
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "import"],
   "rules": {
     "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
     "import/no-unresolved": "error",
     "import/named": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "no-console": "warn"
   }
 }
